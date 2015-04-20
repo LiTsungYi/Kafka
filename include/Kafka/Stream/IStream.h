@@ -1,5 +1,6 @@
+#include <string>
 
-namespace Dk4
+namespace Kafka
 {
 
     struct IStream
@@ -20,4 +21,4 @@ namespace Dk4
 
     };
 
-} // namespace Dk4
+} // namespace Kafka

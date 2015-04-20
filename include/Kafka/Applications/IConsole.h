@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Kafca
+namespace Kafka
 {
     struct IConsole
     {
@@ -12,4 +12,4 @@ namespace Kafca
 
     };
 
-} // namespace Kafca
+} // namespace Kafka

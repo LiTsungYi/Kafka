@@ -118,4 +118,4 @@ namespace Kafka
             return 0;
         }
     }
-}
+} // namespace Kafka

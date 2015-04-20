@@ -3,7 +3,7 @@
 #include <crtdbg.h>
 #include "Kafka\Applications\IConsole.h"
 
-namespace Kafca
+namespace Kafka
 {
 
     IConsole::IConsole()
@@ -17,4 +17,4 @@ namespace Kafca
         _CrtDumpMemoryLeaks();
     }
 
-} // namespace Kafca
+} // namespace Kafka
