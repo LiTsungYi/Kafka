@@ -31,6 +31,6 @@
 *.suo
 *.sdf
 *.vcxproj.user
-/Debug
-/Release
+/obj
+/bin
 /ipch
