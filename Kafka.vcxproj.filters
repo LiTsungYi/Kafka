@@ -54,7 +54,10 @@
     <ClInclude Include="include\Kafka\Stream\IInputStream.h">
       <Filter>Header Files\Stream</Filter>
     </ClInclude>
-    <ClInclude Include="include\Kafka\Stream\IInOutStream.h">
+    <ClInclude Include="include\Kafka\Stream\ISerializable.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\IStream.h">
       <Filter>Header Files\Stream</Filter>
     </ClInclude>
   </ItemGroup>
