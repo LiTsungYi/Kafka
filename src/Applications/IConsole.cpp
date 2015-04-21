@@ -5,7 +5,6 @@
 
 namespace Kafka
 {
-
     IConsole::IConsole()
     {
         _CrtSetDbgFlag( _CRTDBG_REPORT_FLAG | _CRTDBG_LEAK_CHECK_DF );
@@ -16,5 +15,4 @@ namespace Kafka
     {
         _CrtDumpMemoryLeaks();
     }
-
 } // namespace Kafka
