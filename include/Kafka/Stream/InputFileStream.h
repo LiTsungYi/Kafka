@@ -46,7 +46,5 @@ namespace Kafka
         {
             return std::ios_base::in;
         }
-
     };
-
-}
+} // namespace Kafka

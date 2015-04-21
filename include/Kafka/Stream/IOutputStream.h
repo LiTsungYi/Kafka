@@ -1,8 +1,9 @@
 #include <string>
+#include "Kafka\Stream\IStream.h"
 
 namespace Kafka
 {
-    struct IOutputStream
+    struct IOutputStream : public IStream
     {
         virtual bool CanWrite() const = 0;
 

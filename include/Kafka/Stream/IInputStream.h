@@ -1,9 +1,10 @@
 #include <string>
 #include <memory>
+#include "Kafka\Stream\IStream.h"
 
 namespace Kafka
 {
-    struct IInputStream
+    struct IInputStream : public IStream
     {
         virtual bool CanRead() const = 0;
 

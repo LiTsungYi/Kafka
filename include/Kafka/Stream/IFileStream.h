@@ -15,17 +15,11 @@ namespace Kafka
         void CloseFile();
         bool IsOpened() const;
 
-        virtual void Seek( size_t value ) = 0;
-        virtual void Skip( size_t value ) = 0;
+    private:
+        virtual std::ios_base::openmode GetOpenFileMode() = 0;
 
     protected:
-        virtual std::ios_base::openmode GetOpenFileMode()
-        {
-            return  std::ios_base::in;
-        }
-
         std::fstream m_stream;
 
     };
-
-}
+} // namespace Kafka

@@ -6,7 +6,6 @@ namespace Kafka
 {
     IFileStream::IFileStream()
     {
-
     }
 
     IFileStream::~IFileStream()
