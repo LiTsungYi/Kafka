@@ -80,6 +80,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Stream\IFileStream.cpp" />
+    <ClCompile Include="src\Stream\OutputFileStream.cpp" />
+    <ClInclude Include="include\Kafka\Stream\IFileStream.h" />
+    <ClInclude Include="include\Kafka\Stream\IInOutStream.h" />
+    <ClInclude Include="include\Kafka\Stream\IOutputStream.h" />
+    <ClInclude Include="include\Kafka\Stream\OutputFileStream.h" />
     <ClInclude Include="include\targetver.h" />
     <ClInclude Include="include\Pch.h" />
     <ClCompile Include="src\Applications\IConsole.cpp" />
@@ -90,12 +96,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Kafka\Applications\IConsole.h" />
-    <ClInclude Include="include\Kafka\Stream\IStream.h" />
-    <ClInclude Include="include\Kafka\Stream\MemoryStream.h" />
-    <ClInclude Include="include\Kafka\Stream\FileWriter.h" />
+    <ClInclude Include="include\Kafka\Stream\IInputStream.h" />
+    <ClInclude Include="include\Kafka\Stream\InputFileStream.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Stream\FileWriter.cpp" />
+    <ClCompile Include="src\Stream\InputFileStream.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

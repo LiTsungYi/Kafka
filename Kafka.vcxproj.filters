@@ -30,17 +30,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Kafka\Stream\FileWriter.h">
-      <Filter>Header Files\Stream</Filter>
-    </ClInclude>
     <ClInclude Include="include\Kafka\Applications\IConsole.h">
       <Filter>Header Files\Applications</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Kafka\Stream\IStream.h">
-      <Filter>Header Files\Stream</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Kafka\Stream\MemoryStream.h">
-      <Filter>Header Files\Stream</Filter>
     </ClInclude>
     <ClInclude Include="include\Pch.h">
       <Filter>PreCompile</Filter>
@@ -48,16 +39,40 @@
     <ClInclude Include="include\targetver.h">
       <Filter>PreCompile</Filter>
     </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\IFileStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\OutputFileStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\IOutputStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\InputFileStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\IInputStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\IInOutStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Stream\FileWriter.cpp">
-      <Filter>Source Files\Stream</Filter>
-    </ClCompile>
     <ClCompile Include="src\PchCreator.cpp">
       <Filter>PreCompile</Filter>
     </ClCompile>
     <ClCompile Include="src\Applications\IConsole.cpp">
       <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stream\OutputFileStream.cpp">
+      <Filter>Source Files\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stream\IFileStream.cpp">
+      <Filter>Source Files\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stream\InputFileStream.cpp">
+      <Filter>Source Files\Stream</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
