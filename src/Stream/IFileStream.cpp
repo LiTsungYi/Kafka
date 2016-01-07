@@ -4,32 +4,49 @@
 
 namespace Kafka
 {
-    IFileStream::IFileStream()
+IFileStream::IFileStream()
+{}
+
+IFileStream::~IFileStream()
+{
+    CloseFile();
+}
+
+bool IFileStream::OpenFile( const std::wstring& fileName, bool binary )
+{
+    std::ios_base::openmode mode = GetOpenFileMode();
+    if ( binary )
     {
+        mode |= std::ios_base::binary;
     }
 
-    IFileStream::~IFileStream()
+    m_stream.open( fileName, mode );
+    return IsOpened();
+}
+
+bool IFileStream::OpenFile( const std::string& fileName, bool binary )
+{
+    std::ios_base::openmode mode = GetOpenFileMode();
+    if ( binary )
     {
-        CloseFile();
+        mode |= std::ios_base::binary;
     }
 
-    bool IFileStream::OpenFile( const std::string& fileName, bool binary )
-    {
-        std::ios_base::openmode mode = GetOpenFileMode();
-        m_stream.open( fileName, mode | std::ios_base::out | std::ios_base::binary );
-        return IsOpened();
-    }
+    m_stream.open( fileName, mode );
+    return IsOpened();
+}
 
-    void IFileStream::CloseFile()
+void IFileStream::CloseFile()
+{
+    if ( IsOpened() )
     {
-        if ( IsOpened() )
-        {
-            m_stream.close();
-        }
+        m_stream.flush();
+        m_stream.close();
     }
+}
 
-    bool IFileStream::IsOpened() const
-    {
-        return m_stream.is_open();
-    }
+bool IFileStream::IsOpened() const
+{
+    return m_stream.is_open();
+}
 } // namespace Kafka

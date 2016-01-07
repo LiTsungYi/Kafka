@@ -1,76 +1,89 @@
 #include "Pch.h"
 
 #include <cassert>
-#include "Kafka\Stream\OutputFileStream.h"
+#include "Kafka/Stream/OutputFileStream.h"
 
 namespace Kafka
 {
-    void OutputFileStream::Seek( size_t value )
+void OutputFileStream::SeekWrite( size_t value )
+{
+    assert( IsOpened() && "檔案必須開啟" );
+    if ( !IsOpened() )
     {
-        assert( IsOpened() && "檔案必須開啟" );
-
-        m_stream.seekp( value, std::ios_base::beg );
+        return;
     }
 
-    void OutputFileStream::Skip( size_t value )
-    {
-        assert( IsOpened() && "檔案必須開啟" );
+    m_stream.seekp( value, std::ios_base::beg );
+}
 
-        m_stream.seekp( value, std::ios_base::cur );
+void OutputFileStream::SkipWrite( size_t value )
+{
+    assert( IsOpened() && "檔案必須開啟" );
+    if ( !IsOpened() )
+    {
+        return;
     }
 
-    void OutputFileStream::WriteBool( bool value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( bool ) );
-    }
+    m_stream.seekp( value, std::ios_base::cur );
+}
 
-    void OutputFileStream::WriteInt8( char value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( char ) );
-    }
+void OutputFileStream::WriteBool( bool value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( bool ) );
+}
 
-    void OutputFileStream::WriteInt16( short value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( short ) );
-    }
+void OutputFileStream::WriteInt8( Int8 value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( Int8 ) );
+}
 
-    void OutputFileStream::WriteInt32( int value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( int ) );
-    }
+void OutputFileStream::WriteInt16( Int16 value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( Int16 ) );
+}
 
-    void OutputFileStream::WriteUint8( unsigned char value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( unsigned char ) );
-    }
+void OutputFileStream::WriteInt32( Int32 value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( Int32 ) );
+}
 
-    void OutputFileStream::WriteUint16( unsigned short value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( unsigned short ) );
-    }
+void OutputFileStream::WriteUint8( Uint8 value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( Uint8 ) );
+}
 
-    void OutputFileStream::WriteUint32( unsigned int value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( unsigned int ) );
-    }
+void OutputFileStream::WriteUint16( Uint16 value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( Uint16 ) );
+}
 
-    void OutputFileStream::WriteFloat( float value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( float ) );
-    }
+void OutputFileStream::WriteUint32( Uint32 value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( Uint32 ) );
+}
 
-    void OutputFileStream::WriteDouble( double value )
-    {
-        m_stream.write( reinterpret_cast< char* >( &value ), sizeof( double ) );
-    }
+void OutputFileStream::WriteFloat( float value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( float ) );
+}
 
-    void OutputFileStream::WriteBytes( const char* value, size_t length )
-    {
-        m_stream.write( value, length );
-    }
+void OutputFileStream::WriteDouble( double value )
+{
+    m_stream.write( reinterpret_cast< char* >( &value ), sizeof( double ) );
+}
 
-    void OutputFileStream::WriteString( const std::string& value )
-    {
-        m_stream.write( value.c_str(), value.length() );
-    }
+void OutputFileStream::WriteBytes( const char* value, size_t length )
+{
+    m_stream.write( value, length );
+}
+
+void OutputFileStream::WriteString( const std::string& value )
+{
+    m_stream.write( value.c_str(), value.length() );
+}
+
+void OutputFileStream::WriteWstring( const std::wstring& value )
+{
+    m_stream.write( reinterpret_cast<const char*>( value.c_str() ), value.length() * sizeof( wchar_t ) );
+}
 } // namespace Kafka
