@@ -28,6 +28,9 @@
     <Filter Include="PreCompile">
       <UniqueIdentifier>{a2989654-f78b-4dfa-92ac-1a6c7379ae88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Basic">
+      <UniqueIdentifier>{4ec13809-61be-41ef-8720-c4252cde27fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Kafka\Applications\IConsole.h">
@@ -60,6 +63,12 @@
     <ClInclude Include="include\Kafka\Stream\IStream.h">
       <Filter>Header Files\Stream</Filter>
     </ClInclude>
+    <ClInclude Include="include\Kafka\Basic\Types.h">
+      <Filter>Header Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kafka\Stream\InoutFileStream.h">
+      <Filter>Header Files\Stream</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PchCreator.cpp">
@@ -75,6 +84,9 @@
       <Filter>Source Files\Stream</Filter>
     </ClCompile>
     <ClCompile Include="src\Stream\InputFileStream.cpp">
+      <Filter>Source Files\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stream\InoutFileStream.cpp">
       <Filter>Source Files\Stream</Filter>
     </ClCompile>
   </ItemGroup>
