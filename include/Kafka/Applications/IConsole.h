@@ -2,6 +2,7 @@
 
 namespace Kafka
 {
+
 struct IConsole
 {
     IConsole();
@@ -9,4 +10,5 @@ struct IConsole
 
     virtual int Run() = 0;
 };
+
 } // namespace Kafka

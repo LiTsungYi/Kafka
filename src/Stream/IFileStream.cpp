@@ -4,6 +4,7 @@
 
 namespace Kafka
 {
+
 IFileStream::IFileStream()
 {}
 
@@ -49,4 +50,5 @@ bool IFileStream::IsOpened() const
 {
     return m_stream.is_open();
 }
+
 } // namespace Kafka

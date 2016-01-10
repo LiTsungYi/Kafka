@@ -5,6 +5,7 @@
 
 namespace Kafka
 {
+
 void InoutFileStream::SeekRead( size_t value )
 {
     assert( IsOpened() && "檔案必須開啟" );
@@ -189,4 +190,5 @@ void InoutFileStream::WriteWstring( const std::wstring& value )
 {
     m_stream.write( reinterpret_cast<const char*>( value.c_str() ), value.length() * sizeof( wchar_t ) );
 }
+
 } // namespace Kafka

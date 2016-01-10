@@ -6,6 +6,7 @@
 
 namespace Kafka
 {
+
 void InputFileStream::SeekRead( size_t value )
 {
     assert( IsOpened() && "檔案必須開啟" );
@@ -115,4 +116,5 @@ std::string InputFileStream::ReadString( size_t length )
     m_stream.read( buffer.get(), length );
     return std::string( buffer.get(), length );
 }
+
 } // namespace Kafka

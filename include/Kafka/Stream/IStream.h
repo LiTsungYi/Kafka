@@ -2,7 +2,9 @@
 
 namespace Kafka
 {
+
 struct IStream
 {
 };
+
 } // namespace Kafka

@@ -5,6 +5,7 @@
 
 namespace Kafka
 {
+
 struct IInputStream : public IStream
 {
     virtual void SeekRead( size_t value ) = 0;
@@ -23,4 +24,5 @@ struct IInputStream : public IStream
     virtual std::shared_ptr< char > ReadBytes( size_t length ) = 0;
     virtual std::string ReadString( size_t length ) = 0;
 };
+
 } // namespace Kafka

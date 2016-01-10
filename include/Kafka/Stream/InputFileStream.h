@@ -8,6 +8,7 @@
 
 namespace Kafka
 {
+
 class InputFileStream : public IFileStream, public IInputStream
 {
 public:
@@ -47,4 +48,5 @@ private:
         return std::ios_base::in;
     }
 };
+
 } // namespace Kafka

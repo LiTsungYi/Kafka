@@ -4,6 +4,7 @@
 
 namespace Kafka
 {
+
 struct IOutputStream : public IStream
 {
     virtual void SeekWrite( size_t value ) = 0;
@@ -23,4 +24,5 @@ struct IOutputStream : public IStream
     virtual void WriteString( const std::string& value ) = 0;
     virtual void WriteWstring( const std::wstring& value ) = 0;
 };
+
 } // namespace Kafka

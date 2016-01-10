@@ -5,6 +5,7 @@
 
 namespace Kafka
 {
+
 class IFileStream
 {
 public:
@@ -23,4 +24,5 @@ protected:
     std::fstream m_stream;
 
 };
+
 } // namespace Kafka

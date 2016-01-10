@@ -7,6 +7,7 @@
 
 namespace Kafka
 {
+
 IConsole::IConsole()
 {
 #ifdef DEBUG
@@ -21,4 +22,5 @@ IConsole::~IConsole()
     _CrtDumpMemoryLeaks();
 #endif
 }
+
 } // namespace Kafka

@@ -7,6 +7,7 @@
 
 namespace Kafka
 {
+
 class OutputFileStream : public IFileStream, public IOutputStream
 {
 public:
@@ -47,4 +48,5 @@ private:
         return std::ios_base::out;
     }
 };
+
 } // namespace Kafka
