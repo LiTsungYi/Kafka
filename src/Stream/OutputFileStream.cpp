@@ -3,12 +3,12 @@
 #include <cassert>
 #include "Kafka/Stream/OutputFileStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 void OutputFileStream::SeekWrite( size_t value )
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
     if ( !IsOpened() )
     {
         return;
@@ -19,7 +19,7 @@ void OutputFileStream::SeekWrite( size_t value )
 
 void OutputFileStream::SkipWrite( size_t value )
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
     if ( !IsOpened() )
     {
         return;
@@ -88,4 +88,4 @@ void OutputFileStream::WriteWstring( const std::wstring& value )
     m_stream.write( reinterpret_cast<const char*>( value.c_str() ), value.length() * sizeof( wchar_t ) );
 }
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

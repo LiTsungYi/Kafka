@@ -1,8 +1,8 @@
 #include "Pch.h"
 
-#include "Kafka\Stream\IFileStream.h"
+#include "Kafka/Stream/IFileStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 IFileStream::IFileStream()
@@ -51,4 +51,4 @@ bool IFileStream::IsOpened() const
     return m_stream.is_open();
 }
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

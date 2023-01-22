@@ -3,7 +3,7 @@
 #include "Kafka/Basic/Types.h"
 #include "Kafka/Stream/IStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 struct IInputStream : public IStream
@@ -25,4 +25,4 @@ struct IInputStream : public IStream
     virtual std::string ReadString( size_t length ) = 0;
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

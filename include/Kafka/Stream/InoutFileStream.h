@@ -1,9 +1,9 @@
 #include "Pch.h"
 
-#include <Kafka/Stream/InputFileStream.h>
-#include <Kafka/Stream/OutputFileStream.h>
+#include "Kafka/Stream/InputFileStream.h"
+#include "Kafka/Stream/OutputFileStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 class InoutFileStream : public IFileStream, public IInputStream, public IOutputStream
@@ -70,4 +70,4 @@ private:
     }
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

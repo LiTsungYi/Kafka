@@ -1,10 +1,10 @@
 #pragma once
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 struct IStream
 {
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

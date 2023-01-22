@@ -2,7 +2,7 @@
 #include "Kafka/Basic/Types.h"
 #include "Kafka/Stream/IStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 struct IOutputStream : public IStream
@@ -25,4 +25,4 @@ struct IOutputStream : public IStream
     virtual void WriteWstring( const std::wstring& value ) = 0;
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

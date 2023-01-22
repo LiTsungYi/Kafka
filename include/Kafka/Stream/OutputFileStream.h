@@ -2,10 +2,10 @@
 
 #include <string>
 #include <fstream>
-#include "Kafka\Stream\IFileStream.h"
-#include "Kafka\Stream\IOutputStream.h"
+#include "Kafka/Stream/IFileStream.h"
+#include "Kafka/Stream/IOutputStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 class OutputFileStream : public IFileStream, public IOutputStream
@@ -49,4 +49,4 @@ private:
     }
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

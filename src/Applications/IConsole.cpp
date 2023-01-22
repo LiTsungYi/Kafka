@@ -3,7 +3,7 @@
 #ifdef DEBUG
 #include <crtdbg.h>
 #endif
-#include "Kafka\Applications\IConsole.h"
+#include "Kafka/Applications/IConsole.h"
 
 namespace Kafka
 {

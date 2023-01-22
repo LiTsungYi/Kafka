@@ -11,4 +11,4 @@ struct IConsole
     virtual int Run() = 0;
 };
 
-} // namespace Kafka
+}  // namespace Kafka

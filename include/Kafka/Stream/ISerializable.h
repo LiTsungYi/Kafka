@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 struct IOutputStream;
@@ -14,4 +14,4 @@ struct ISerializable
     virtual void ReadFromStream( std::shared_ptr<IInputStream> stream ) = 0;
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

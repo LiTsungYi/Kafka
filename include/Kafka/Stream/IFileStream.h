@@ -3,7 +3,7 @@
 #include <string>
 #include <fstream>
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 class IFileStream
@@ -25,4 +25,4 @@ protected:
 
 };
 
-} // namespace Kafka
+}  // namespace Kafka::Stream

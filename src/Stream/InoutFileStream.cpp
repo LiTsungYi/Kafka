@@ -3,58 +3,58 @@
 #include <cassert>
 #include "Kafka/Stream/InoutFileStream.h"
 
-namespace Kafka
+namespace Kafka::Stream
 {
 
 void InoutFileStream::SeekRead( size_t value )
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     m_stream.seekg( value, std::ios_base::beg );
 }
 
 void InoutFileStream::SeekWrite( size_t value )
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     m_stream.seekp( value, std::ios_base::beg );
 }
 
 void InoutFileStream::SkipRead( size_t value )
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     m_stream.seekg( value, std::ios_base::cur );
 }
 
 void InoutFileStream::SkipWrite( size_t value )
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     m_stream.seekp( value, std::ios_base::cur );
 }
 
 bool InoutFileStream::ReadBool()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( bool ) ];
     m_stream.read( buffer, sizeof( bool ) );
-    return buffer != 0;
+    return buffer[0] != 0;
 }
 
 Int8 InoutFileStream::ReadInt8()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( char ) ];
     m_stream.read( buffer, sizeof( char ) );
-    return buffer[ 0 ];
+    return buffer[0];
 }
 
 Int16 InoutFileStream::ReadInt16()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( short ) ];
     m_stream.read( buffer, sizeof( short ) );
@@ -63,7 +63,7 @@ Int16 InoutFileStream::ReadInt16()
 
 Int32 InoutFileStream::ReadInt32()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( int ) ];
     m_stream.read( buffer, sizeof( int ) );
@@ -72,7 +72,7 @@ Int32 InoutFileStream::ReadInt32()
 
 Uint8 InoutFileStream::ReadUint8()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( unsigned char ) ];
     m_stream.read( buffer, sizeof( unsigned char ) );
@@ -81,7 +81,7 @@ Uint8 InoutFileStream::ReadUint8()
 
 Uint16 InoutFileStream::ReadUint16()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( unsigned short ) ];
     m_stream.read( buffer, sizeof( unsigned short ) );
@@ -90,7 +90,7 @@ Uint16 InoutFileStream::ReadUint16()
 
 Uint32 InoutFileStream::ReadUint32()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( unsigned int ) ];
     m_stream.read( buffer, sizeof( unsigned int ) );
@@ -99,7 +99,7 @@ Uint32 InoutFileStream::ReadUint32()
 
 float InoutFileStream::ReadFloat()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( float ) ];
     m_stream.read( buffer, sizeof( float ) );
@@ -108,7 +108,7 @@ float InoutFileStream::ReadFloat()
 
 double InoutFileStream::ReadDouble()
 {
-    assert( IsOpened() && "ÀÉ®×¥²¶·¶}±Ò" );
+    assert( IsOpened() && "ï¿½É®×¥ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½" );
 
     char buffer[ sizeof( double ) ];
     m_stream.read( buffer, sizeof( double ) );
@@ -191,4 +191,4 @@ void InoutFileStream::WriteWstring( const std::wstring& value )
     m_stream.write( reinterpret_cast<const char*>( value.c_str() ), value.length() * sizeof( wchar_t ) );
 }
 
-} // namespace Kafka
+}  // namespace Kafka::Stream
