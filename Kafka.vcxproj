@@ -92,6 +92,7 @@
       <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,6 +125,7 @@
       <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
