@@ -90,4 +90,7 @@
       <Filter>Source Files\Stream</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
 </Project>
